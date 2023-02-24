@@ -2,6 +2,7 @@ class Recipe
   attr_reader :title, :ingredient, :image, :recipe_id
   
   def initialize(attr)
+    # require 'pry'; binding.pry
     @title = attr[:title]
     @ingredient = attr[:usedIngredients].map do |used|
       used[:name]
