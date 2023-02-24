@@ -1,13 +1,7 @@
 class Api::V1::RecipesController < ApplicationController
-  # def index
-  # #  require 'pry'; binding.pry
-  #   recipe = RecipeFacade.all_recipes(params[:id])
-  #   render json: RecipeSerializer.new(recipe)
-  # end
-
   def search
-    recipe_info = RecipeFacade.search_recipe(params[:ingredients])
-    render json: RecipeSerializer.new(recipe_info)
+    recipe_info = DiscoverFacade.search_recipe(params[:ingredients])
+    render json: DiscoverSerializer.new(recipe_info)
   end
 
   def show
