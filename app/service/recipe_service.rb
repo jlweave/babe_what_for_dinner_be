@@ -1,11 +1,10 @@
 class RecipeService
-  def self.recipe_response(params)
-    url = "/recipes/findByIngredients?ignorePantry=true&ingredients=" + self.parse(params) + "&number=200&ranking=1"
-    response = conn.get(url)
+  def self.discover_recipes(params)
+    response = conn.get("/recipes/findByIngredients?ignorePantry=true&ingredients=#{self.parse(params)}&number=200&ranking=1")
     data = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.get_single_recipe(query)
+  def self.get_recipe(query)
     response = conn.get("/recipes/#{query}/information")
     data = JSON.parse(response.body, symbolize_names: true)
   end
