@@ -9,10 +9,10 @@ class Api::V1::RecipesController < ApplicationController
     recipe_info = RecipeFacade.search_recipe(params[:ingredients])
     render json: RecipeSerializer.new(recipe_info)
   end
-  
+
   def show
     query = params[:id]
     recipe = RecipeFacade.single_recipe(query)
-    render json: RecipeSerializer.new(query)
+    render json: RecipeSerializer.new(recipe)
   end
 end
