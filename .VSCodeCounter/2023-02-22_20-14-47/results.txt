@@ -1,0 +1,102 @@
+Date : 2023-02-22 20:14:47
+Directory : /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be
+Total : 43 files,  330 codes, 748 comments, 182 blanks, all 1260 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Ruby     |         35 |        235 |        615 |        134 |        984 |
+| Gemfile  |          1 |         39 |         18 |         12 |         69 |
+| YAML     |          4 |         31 |        114 |         21 |        166 |
+| Markdown |          1 |         13 |          0 |         12 |         25 |
+| erb      |          2 |         12 |          1 |          3 |         16 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         43 |        330 |        748 |        182 |      1,260 |
+| . (Files)                                                                                                         |          3 |         54 |         19 |         27 |        100 |
+| app                                                                                                               |         14 |         71 |          2 |         14 |         87 |
+| app/channels                                                                                                      |          2 |          8 |          0 |          2 |         10 |
+| app/channels/application_cable                                                                                    |          2 |          8 |          0 |          2 |         10 |
+| app/controllers                                                                                                   |          2 |         11 |          1 |          2 |         14 |
+| app/controllers (Files)                                                                                           |          1 |          2 |          0 |          1 |          3 |
+| app/controllers/api                                                                                               |          1 |          9 |          1 |          1 |         11 |
+| app/controllers/api/v1                                                                                            |          1 |          9 |          1 |          1 |         11 |
+| app/facade                                                                                                        |          1 |          7 |          0 |          1 |          8 |
+| app/jobs                                                                                                          |          1 |          2 |          0 |          1 |          3 |
+| app/mailers                                                                                                       |          1 |          4 |          0 |          1 |          5 |
+| app/models                                                                                                        |          2 |          5 |          0 |          2 |          7 |
+| app/poros                                                                                                         |          1 |          7 |          0 |          0 |          7 |
+| app/serializers                                                                                                   |          1 |          4 |          0 |          1 |          5 |
+| app/service                                                                                                       |          1 |         11 |          0 |          1 |         12 |
+| app/views                                                                                                         |          2 |         12 |          1 |          3 |         16 |
+| app/views/layouts                                                                                                 |          2 |         12 |          1 |          3 |         16 |
+| config                                                                                                            |         19 |        128 |        286 |        111 |        525 |
+| config (Files)                                                                                                    |          8 |         64 |        125 |         38 |        227 |
+| config/environments                                                                                               |          3 |         58 |         79 |         51 |        188 |
+| config/initializers                                                                                               |          7 |          4 |         52 |         20 |         76 |
+| config/locales                                                                                                    |          1 |          2 |         30 |          2 |         34 |
+| db                                                                                                                |          3 |         25 |         19 |          8 |         52 |
+| db (Files)                                                                                                        |          2 |         16 |         19 |          6 |         41 |
+| db/migrate                                                                                                        |          1 |          9 |          0 |          2 |         11 |
+| spec                                                                                                              |          4 |         52 |        422 |         22 |        496 |
+| spec (Files)                                                                                                      |          2 |         28 |        422 |         13 |        463 |
+| spec/factories                                                                                                    |          1 |          6 |          0 |          0 |          6 |
+| spec/requests                                                                                                     |          1 |         18 |          0 |          9 |         27 |
+| spec/requests/api                                                                                                 |          1 |         18 |          0 |          9 |         27 |
+| spec/requests/api/v1                                                                                              |          1 |         18 |          0 |          9 |         27 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                          | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/Gemfile                                                | Gemfile  |         39 |         18 |         12 |         69 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/README.md                                              | Markdown |         13 |          0 |         12 |         25 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/channels/application_cable/channel.rb              | Ruby     |          4 |          0 |          1 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/channels/application_cable/connection.rb           | Ruby     |          4 |          0 |          1 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/controllers/api/v1/recipes_controller.rb           | Ruby     |          9 |          1 |          1 |         11 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/controllers/application_controller.rb              | Ruby     |          2 |          0 |          1 |          3 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/facade/recipe_facade.rb                            | Ruby     |          7 |          0 |          1 |          8 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/jobs/application_job.rb                            | Ruby     |          2 |          0 |          1 |          3 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/mailers/application_mailer.rb                      | Ruby     |          4 |          0 |          1 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/models/application_record.rb                       | Ruby     |          3 |          0 |          1 |          4 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/models/recipe.rb                                   | Ruby     |          2 |          0 |          1 |          3 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/poros/recipe.rb                                    | Ruby     |          7 |          0 |          0 |          7 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/serializers/recipe_serializer.rb                   | Ruby     |          4 |          0 |          1 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/service/recipe_service.rb                          | Ruby     |         11 |          0 |          1 |         12 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/views/layouts/mailer.html.erb                      | erb      |         11 |          1 |          2 |         14 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/app/views/layouts/mailer.text.erb                      | erb      |          1 |          0 |          1 |          2 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config.ru                                              | Ruby     |          2 |          1 |          3 |          6 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/application.rb                                  | Ruby     |         17 |         13 |          6 |         36 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/boot.rb                                         | Ruby     |          3 |          0 |          2 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/cable.yml                                       | YAML     |          8 |          0 |          3 |         11 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/database.yml                                    | YAML     |         15 |         61 |         10 |         86 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/environment.rb                                  | Ruby     |          2 |          2 |          2 |          6 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/environments/development.rb                     | Ruby     |         22 |         17 |         16 |         55 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/environments/production.rb                      | Ruby     |         20 |         43 |         23 |         86 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/environments/test.rb                            | Ruby     |         16 |         19 |         12 |         47 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/application_controller_renderer.rb | Ruby     |          0 |          7 |          2 |          9 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/backtrace_silencers.rb             | Ruby     |          0 |          5 |          3 |          8 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/cors.rb                            | Ruby     |          0 |         13 |          4 |         17 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/filter_parameter_logging.rb        | Ruby     |          1 |          2 |          2 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/inflections.rb                     | Ruby     |          0 |         14 |          3 |         17 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/mime_types.rb                      | Ruby     |          0 |          3 |          2 |          5 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/initializers/wrap_parameters.rb                 | Ruby     |          3 |          8 |          4 |         15 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/locales/en.yml                                  | YAML     |          2 |         30 |          2 |         34 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/puma.rb                                         | Ruby     |          6 |         25 |          7 |         38 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/routes.rb                                       | Ruby     |          7 |          1 |          2 |         10 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/config/storage.yml                                     | YAML     |          6 |         23 |          6 |         35 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/db/migrate/20230223012346_create_recipes.rb            | Ruby     |          9 |          0 |          2 |         11 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/db/schema.rb                                           | Ruby     |          9 |         12 |          5 |         26 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/db/seeds.rb                                            | Ruby     |          7 |          7 |          1 |         15 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/spec/factories/recipe.rb                               | Ruby     |          6 |          0 |          0 |          6 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/spec/rails_helper.rb                                   | Ruby     |         19 |         41 |          7 |         67 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/spec/requests/api/v1/recipes_request_spec.rb           | Ruby     |         18 |          0 |          9 |         27 |
+| /Users/janiceweaver/3Mod/projects/babe_whats_for_dinner_be/spec/spec_helper.rb                                    | Ruby     |          9 |        381 |          6 |        396 |
+| Total                                                                                                             |          |        330 |        748 |        182 |      1,260 |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
