@@ -14,13 +14,9 @@ class RecipeFacade
   end
 
   def self.single_recipe(query)
-    # require 'pry'; binding.pry
-    recipe_list = RecipeService.get_single_recipe(query)
-    recipe_list.each do |recipe|
-      require 'pry'; binding.pry
+      # binding.pry
+      recipe = RecipeService.get_single_recipe(query)
+      # binding.pry
       Recipe.new(recipe)
-      require 'pry'; binding.pry
-    end
   end
-
 end
