@@ -6,17 +6,8 @@ class RecipeFacade
   #   end
   # end
   
-  def self.search_recipe(term)
-    data = RecipeService.recipe_response(term)
-    data.map do |recipe_attr|
-      Recipe.new(recipe_attr)
-    end
-  end
-
-  def self.single_recipe(query)
-      # binding.pry
-      recipe = RecipeService.get_single_recipe(query)
-      # binding.pry
-      Recipe.new(recipe)
+  def self.single_recipe(term)
+    data = RecipeService.get_recipe(term)
+    Recipe.new(data)
   end
 end
