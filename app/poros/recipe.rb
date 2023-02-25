@@ -1,13 +1,23 @@
 class Recipe
-  attr_reader :title, :ingredient, :image, :recipe_id
-  
-  def initialize(attr)
-    # require 'pry'; binding.pry
-    @title = attr[:title]
-    @ingredient = attr[:usedIngredients].map do |used|
-      used[:name]
+  attr_reader :id, :title, :ready_in_minutes, :image, :summary, :instructions, :ingredients
+  def initialize(data)
+    # binding.pry
+    @id = data[:id]
+    @title = data[:title]
+    @ready_in_minutes = data[:readyInMinutes]
+    @image = data[:image]
+    @summary = data[:summary]
+    @instructions = data[:instructions]
+    @ingredients = extended_ingredients(data[:extendedIngredients])
+  end
+
+  def extended_ingredients(data)
+    data.map do |ingr|
+      {
+        :name => ingr[:name],
+        :amount => ingr[:amount],
+        :unit => ingr[:unit]
+      }
     end
-    @image = attr[:image]
-    @recipe_id = attr[:id]
   end
 end

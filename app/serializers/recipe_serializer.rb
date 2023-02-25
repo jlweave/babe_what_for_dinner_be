@@ -1,5 +1,4 @@
 class RecipeSerializer
   include JSONAPI::Serializer
-    set_id {nil}
-    attributes :title, :ingredient, :image, :recipe_id
+    attributes :id, :title, :ready_in_minutes, :image, :summary, :instructions, :ingredients
 end
