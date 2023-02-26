@@ -1,6 +1,7 @@
 class Api::V1::UserRecipesController < ApplicationController
   def index
-    render json: RecipeSerializer.new(UserRecipe.all)
+    user_recipes = UserRecipe.where(:uid = params[:uid])
+    render json: RecipeSerializer.new(user_recipes)
   end
 
   def new
