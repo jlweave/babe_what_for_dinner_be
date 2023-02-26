@@ -5,9 +5,26 @@ RSpec.describe 'RecipeAPI' do
     json_response = File.read('spec/fixtures/ingredient_search_results.json')
 
     stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=200&ignorePantry=true&ranking=1")
-      .with(headers: { 'X-RapidAPI-Key' => '4f4fbc3ba2msh745c24cf4e7edbdp13621djsn50bc1816f418', 'X-RapidAPI-Host' => 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com' })
-      .to_return(status: 200, body: json_response, headers: {})
+      .with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4',
+          'X-Rapidapi-Host'=>'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+          'X-Rapidapi-Key'=>'4f4fbc3ba2msh745c24cf4e7edbdp13621djsn50bc1816f418'
+           }).
+         to_return(status: 200, body: json_response, headers: {})
 
+    # stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/api/v1/recipes/findByIngredients?ignorePantry=true&ingredients=apples,flour,sugar&number=200&ranking=1").
+    #      with(
+    #        headers: {
+    #       'Accept'=>'*/*',
+    #       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+    #       'User-Agent'=>'Faraday v2.7.4',
+    #       'X-Rapidapi-Host'=>'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+    #       'X-Rapidapi-Key'=>'4f4fbc3ba2msh745c24cf4e7edbdp13621djsn50bc1816f418'
+    #        }).
+    #      to_return(status: 200, body: "", headers: {})
    end
 
    it "returns recipes that contain ingrediants search by(findByIngredients)" do
