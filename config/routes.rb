@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/recipes/findByIngredients', to: 'recipes#search'
       get '/recipes/:id/information', to: 'recipes#show'
-     
+      get '/user_recipes', to: 'user_recipes#index'
+      post '/user_recipes', to: 'user_recipes#create'
     end
   end
 
