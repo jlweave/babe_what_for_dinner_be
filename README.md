@@ -9,11 +9,19 @@
 <h3 align="center">This repo handles the Back End project responsibilities. <a href="https://github.com/ryancanton/babe_whats_for_dinner_fe">Click Here</a> to visit our Front End repo
 </h3>
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Setup and Installation](#setup-and-installation)
+- [Learning Goals](#learning-goals)
+- [API Information](#api-information)
+- [Responsible Parties](#responsible-parties)
+
 ## Project Overview
 
 **_Babe, What's For Dinner?_** is an application that allows users to input ingredients they have on hand to return recipes that include all of those ingredients.
 
-If a user has MOST ingredients on hand, **_Babe, What's For Dinner?_** will return other recipes ordered by the number of missing ingredients, indicate which ingredients are missing, and the cost of those ingredients from Kroger / King Soopers.
+If a user has MOST ingredients on hand, **_Babe, What's For Dinner?_** will return other recipes ordered by the number of missing ingredients and indicate which ingredients are missing.
 
 When a user creates an account, they are provided their own **_Babe, What's For Dinner?_** dashboard which allows them to save recipes.
 
@@ -40,6 +48,12 @@ To run the server on localhost:5000: ```rails s```
 - Build and consume APIs
 - Implement OAuth for user registration
 - Create wireframes and user stories to facilitate programming
+
+## API Information
+
+We are consuming the <a href= "https://spoonacular.com/food-api">Spoonacular API </a>for this project. 
+- <a href= "https://spoonacular.com/food-api/recipes">Recipes Index</a>
+- <a href= "https://spoonacular.com/food-api/recipes/#{query}/information">Recipes Show</a>
 
 ## Responsible Parties
 
