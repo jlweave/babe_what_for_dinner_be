@@ -1,8 +1,7 @@
 class Api::V1::UserRecipesController < ApplicationController
   def index
     user_recipes = UserRecipe.where(uid: params[:uid])
-
-    render json: UserRecipeSerializer.new(user_recipes)
+    render json: UserRecipeSerializer.new(UserRecipesFacade.get_recipes(user_recipes))
   end
 
   def new
