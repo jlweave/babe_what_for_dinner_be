@@ -5,7 +5,7 @@ RSpec.describe 'RecipeAPI' do
     json_response = File.read('spec/fixtures/ingredient_search_results.json')
 
     stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=200&ignorePantry=true&ranking=1")
-         .to_return(status: 200, body: json_response, headers: {})
+      .to_return(status: 200, body: json_response, headers: {})
    end
 
    it "returns recipes that contain ingrediants search by(findByIngredients)" do
