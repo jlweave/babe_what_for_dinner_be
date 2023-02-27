@@ -31,15 +31,11 @@ Check us out! https://babe-whats-for-dinner-be.herokuapp.com/discover
 
 From your terminal, run:
 
-```git clone git@github.com:jlweave/babe_whats_for_dinner_be.git```
-
-```bundle install```
-
-```rails db:create```
-
-To run the tests: ```bundle exec rspec```
-
-To run the server on localhost:5000: ```rails s```
+- ```git clone git@github.com:jlweave/babe_whats_for_dinner_be.git```
+- ```bundle install```
+- ```rails db:create```
+- To run the tests: ```bundle exec rspec```
+- <a href= "https://babe-whats-for-dinner-be.herokuapp.be"> Click Here </a>to run the server
 
 ## Learning Goals
 
@@ -63,7 +59,3 @@ We are consuming the <a href= "https://spoonacular.com/food-api">Spoonacular API
 | Collaborator | Collaborator | Collaborator | Collaborator | Collaborator | Project Manager |
 | [GitHub](https://github.com/pkseverance) | [GitHub](https://github.com/jlweave) | [GitHub](https://github.com/WilliamLampke) | [GitHub](https://github.com/ryancanton) | [GitHub](https://github.com/bflanagan138) | [GitHub](https://github.com/brianzanti) |
 | [LinkedIn](https://www.linkedin.com/in/patricia-severance/) |  [LinkedIn](https://www.linkedin.com/in/lacey-weaver-be-dev/) | [LinkedIn](https://www.linkedin.com/in/william-lampke-b4a5b5250/) | [LinkedIn](https://www.linkedin.com/in/ryan-canton-6a4854255/) | [LinkedIn](https://www.linkedin.com/in/bryanflanagan138/) | [LinkedIn](https://www.linkedin.com/in/brianzanti/) |
-
-
-secret: 226cd6ab93811f1ccabae4a1d9f9aa005140c1e1
-id: f52797da1ca750c9f089
