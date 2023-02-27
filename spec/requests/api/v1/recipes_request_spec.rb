@@ -4,14 +4,7 @@ describe "Recipe API" do
   before (:each) do
  json_response = File.read('spec/fixtures/single_recipe.json')
     stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information")
-      .with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v2.7.4',
-          'X-Rapidapi-Host'=>'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-          'X-Rapidapi-Key'=>'4f4fbc3ba2msh745c24cf4e7edbdp13621djsn50bc1816f418'
-           }).to_return(status: 200, body: json_response, headers: {})
+    .to_return(status: 200, body: json_response, headers: {})
   end
 
   it "returns a recipes show page" do
