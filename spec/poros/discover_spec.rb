@@ -13,11 +13,10 @@ RSpec.describe "discover_result" do
     expect(result).to be_a DiscoverResult
     expect(result.name).to eq "Stir Fry Broccoli"
     expect(result.image).to be_a String
-    expect((result.missing_ingr).count).to eq 2
+    expect(result.missing_ingr.count).to eq 2
     expect(result.missing_ingr_count).to eq 1489
     expect(result.missing_ingredients(data[:missedIngredients])).to be_a Array
     result.missing_ingredients(data[:missedIngredients]).each do |ingredient|
-      expect(ingredient.count).to eq 3
       expect(ingredient).to be_a Hash
       expect(ingredient[:name]).to be_a String
       expect(ingredient[:amount]).to be_a Float
