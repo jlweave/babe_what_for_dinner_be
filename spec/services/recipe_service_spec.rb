@@ -1,19 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe '#recipes' do
-  before :each do
-    json_response = File.read('spec/fixtures/ingredient_search_results.json')
- 
+  it 'returns JSON response for discover_recipes' do
+    json_response_1 = File.read('spec/fixtures/ingredient_search_results.json')
     stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ignorePantry=true&ingredients=apples,flour,sugar&number=200&ranking=1")
-        #  .with(
-        #    headers: {
-        #   'X-Rapidapi-Host'=>"#{ENV['recipe_api_host']}",
-        #   'X-Rapidapi-Key'=>"#{ENV['recipe_api_key']}"
-        #    })
-         .to_return(status: 200, body: json_response, headers: {})
-        end 
-       
-  it 'returns JSON for response' do
+      .to_return(status: 200, body: json_response_1, headers: {})
+
     params = "apples,flour,sugar"
     results = RecipeService.discover_recipes(params)
     
@@ -32,6 +24,31 @@ RSpec.describe '#recipes' do
         expect(ingredients).to have_key(:amount)
         expect(ingredients[:amount]).to be_a Float
       end
+    end
+  end
+
+  it 'returns JSON response for get_recipe' do
+    json_response_2 = File.read('spec/fixtures/single_recipe.json')
+    query = 18079
+    stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/#{query}/information")
+      .to_return(status: 200, body: json_response_2, headers: {})
+    results = RecipeService.get_recipe(query)
+    
+    expect(results).to be_a Hash
+    expect(results).to have_key(:instructions)
+    expect(results[:instructions]).to be_a String
+    expect(results).to have_key(:extendedIngredients)
+    expect(results[:extendedIngredients]).to be_a Array
+    results[:extendedIngredients].each do |ingredient|
+      expect(ingredient).to be_a Hash
+      expect(ingredient).to have_key(:id)
+      expect(ingredient[:id]).to be_a Integer
+      expect(ingredient).to have_key(:name)
+      expect(ingredient[:name]).to be_a String
+      expect(ingredient).to have_key(:amount)
+      expect(ingredient[:amount]).to be_a Float
+      expect(ingredient).to have_key(:unit)
+      expect(ingredient[:unit]).to be_a String
     end
   end
 end
