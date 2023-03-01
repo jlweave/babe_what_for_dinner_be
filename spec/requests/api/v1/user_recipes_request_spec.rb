@@ -49,7 +49,7 @@ RSpec.describe "User Recipes Favorites" do
 
     user_recipe = UserRecipe.last
     expect(UserRecipe.all).to eq([user_recipe])
-    delete "/api/v1/user_recipes/#{user_recipe.id}"
+    delete "/api/v1/user_recipes?recipe_id=#{user_recipe.recipe_id}&uid=#{user_recipe.uid}"
     expect(UserRecipe.all).to eq([])
   end
 end
