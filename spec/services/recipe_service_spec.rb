@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe '#recipes' do
   it 'returns JSON response for discover_recipes' do
     json_response_1 = File.read('spec/fixtures/ingredient_search_results.json')
-    stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ignorePantry=true&ingredients=apples,flour,sugar&number=200&ranking=1")
+    params = "apples,flour,sugar"
+    stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ignorePantry=true&ingredients=#{params}&number=200&ranking=1")
       .to_return(status: 200, body: json_response_1, headers: {})
 
-    params = "apples,flour,sugar"
     results = RecipeService.discover_recipes(params)
     
     expect(results).to be_a Array

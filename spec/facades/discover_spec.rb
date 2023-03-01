@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'discover' do
+RSpec.describe 'DiscoverFacade' do
   it 'returns a list of recipes containing ingredients passed in' do
     json_response = File.read('spec/fixtures/ingredient_search_results.json')
     query = 'apples,flour,sugar'
