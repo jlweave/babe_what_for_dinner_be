@@ -1,7 +1,6 @@
 class Recipe
   attr_reader :id, :title, :ready_in_minutes, :image, :summary, :instructions, :ingredients
   def initialize(data)
-    # binding.pry
     @id = data[:id]
     @title = data[:title]
     @ready_in_minutes = data[:readyInMinutes]
