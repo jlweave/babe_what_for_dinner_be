@@ -27,6 +27,12 @@ When a user creates an account, they are provided their own **_Babe, What's For 
 
 Check us out! https://babe-whats-for-dinner-be.herokuapp.com/discover
 
+## Schema
+<p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/113324661/222261562-e7764f35-a8e2-4a7a-99ed-5d1e0a5ba159.png">
+</p>
+
+
 ## Setup and Installation
 
 From your terminal, run:
