@@ -15,6 +15,11 @@ class Api::V1::UserRecipesController < ApplicationController
       render json: {errors: "Recipe was not saved to favorites"}, status: 404
     end
   end
+  def destroy 
+      user_recipe = UserRecipe.find(params[:id])
+      recipe_id = user_recipe.recipe_id
+      user_recipe.destroy
+  end
 
 
   private

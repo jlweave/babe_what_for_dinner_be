@@ -7,6 +7,7 @@ RSpec.describe "User Recipes Favorites" do
     expect(response).to be_successful
 
     user_recipe = UserRecipe.last
+    
     expect(user_recipe.uid).to eq("1234")
     expect(user_recipe[:uid]).to be_a(String)
 
@@ -40,5 +41,15 @@ RSpec.describe "User Recipes Favorites" do
       expect(user_recipe[:attributes]).to have_key(:recipe_name)
       expect(user_recipe[:attributes][:recipe_name]).to be_a(String)
     end
+  end
+  it "can delete a user recipe" do
+    post '/api/v1/user_recipes?uid=1234&recipe_id=5678&recipe_name=AppleyApplesauce'
+
+    expect(response).to be_successful
+
+    user_recipe = UserRecipe.last
+    expect(UserRecipe.all).to eq([user_recipe])
+    delete "/api/v1/user_recipes/#{user_recipe.id}"
+    expect(UserRecipe.all).to eq([])
   end
 end

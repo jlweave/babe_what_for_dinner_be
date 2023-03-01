@@ -12,7 +12,6 @@ describe "Recipe API" do
     expect(response).to be_successful
 
     recipe = JSON.parse(response.body, symbolize_names: true)
-
     expect(recipe[:data]).to have_key(:id)
 
     expect(recipe[:data]).to have_key(:type)
