@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
+- [Schema](#schema)
 - [Setup and Installation](#setup-and-installation)
 - [Learning Goals](#learning-goals)
 - [API Information](#api-information)
