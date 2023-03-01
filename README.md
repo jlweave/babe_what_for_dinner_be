@@ -13,6 +13,7 @@
 
 - [Project Overview](#project-overview)
 - [Schema](#schema)
+- [Tech Stack](#tech-stack)
 - [Setup and Installation](#setup-and-installation)
 - [Learning Goals](#learning-goals)
 - [API Information](#api-information)
@@ -33,6 +34,8 @@ Check us out! https://babe-whats-for-dinner-be.herokuapp.com/discover
   <img width="300" src="https://user-images.githubusercontent.com/113324661/222261562-e7764f35-a8e2-4a7a-99ed-5d1e0a5ba159.png">
 </p>
 
+## Tech Stack
+![BWFD Tech Stack](https://user-images.githubusercontent.com/109649285/222281020-da5e7bea-b784-41f4-83fa-6e6f8aeb90cf.png)
 
 ## Setup and Installation
 
