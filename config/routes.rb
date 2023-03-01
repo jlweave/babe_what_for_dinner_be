@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get '/recipes/:id/information', to: 'recipes#show'
       get '/user_recipes', to: 'user_recipes#index'
       post '/user_recipes', to: 'user_recipes#create'
-      delete '/user_recipes/:id', to: 'user_recipes#destroy'
+      delete '/user_recipes', to: 'user_recipes#destroy'
     end
   end
 
