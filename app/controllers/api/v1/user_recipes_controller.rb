@@ -8,11 +8,16 @@ class Api::V1::UserRecipesController < ApplicationController
   end
 
   def create
-    user_recipe = UserRecipe.new(user_recipe_params)
-    if user_recipe.save 
-      render json: UserRecipeSerializer.new(user_recipe), status: 201
-    else 
-      render json: {errors: "Recipe was not saved to favorites"}, status: 404
+    #add unique conditional to make sure we don't create duplicates
+    if UserRecipe.where(uid: params[:uid]).where(recipe_id: params[:recipe_id]).length > 0
+      render json: {errors: "Recipe already added to favorites"}, status: 422
+    else
+        user_recipe = UserRecipe.new(user_recipe_params)
+      if user_recipe.save 
+        render json: UserRecipeSerializer.new(user_recipe), status: 201
+      else 
+        render json: {errors: "Recipe was not saved to favorites"}, status: 404
+      end
     end
   end
 
